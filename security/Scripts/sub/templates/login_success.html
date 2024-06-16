@@ -1,0 +1,53 @@
+<!-- success.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('/static/img1.jpg');
+            background-size: cover; /* Cover the entire screen */
+            background-position: center; /* Center the background image */
+
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            opacity: 0; /* Set initial opacity to 0 for fade-in effect */
+            animation: fadeIn 1s forwards; /* Apply fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="successMessage">Login Successful!</h1>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            setTimeout(function () {
+                var successMessage = document.getElementById('successMessage');
+                successMessage.style.animation = 'none'; 
+                successMessage.style.opacity = '1'; 
+            }, 500); 
+        });
+    </script>
+</body>
+</html>
